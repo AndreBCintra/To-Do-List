@@ -1,0 +1,56 @@
+<div class="task-list-container">
+  <h2>Minhas Tarefas</h2>
+
+  <div class="task-header">
+    <div class="filters">
+      <label>
+        Status:
+        <select [(ngModel)]="filterStatus" (change)="applyFilters()">
+          <option value="all">Todos</option>
+          <option value="pending">Pendentes</option>
+          <option value="done">Concluídas</option>
+        </select>
+      </label>
+
+      <input
+        type="text"
+        [(ngModel)]="searchTerm"
+        (input)="applyFilters()"
+        placeholder="Buscar por título..." />
+    </div>
+
+    <div class="order-buttons">
+      <button (click)="toggleOrderField()">
+        Order by {{ orderByTitle ? 'Title' : 'Date' }}
+      </button>
+      <button (click)="toggleOrderDirection()">
+        {{ orderAsc ? '▲' : '▼' }}
+      </button>
+    </div>
+  </div>
+
+  <div class="task-actions">
+    <button (click)="newTask()">+ Nova Tarefa</button>
+  </div>
+
+  <div *ngIf="loading">Carregando...</div>
+
+  <div *ngIf="!loading && tasks.length === 0">
+    Nenhuma tarefa cadastrada.
+  </div>
+
+  <ul *ngIf="!loading && tasks.length > 0">
+    <li *ngFor="let task of tasks" [class.done]="task.status === 'done'">
+      <label>
+        <input
+          type="checkbox"
+          [checked]="task.status === 'done'"
+          (change)="toggleStatus(task)" />
+        <strong>{{ task.title }}</strong>
+      </label>
+      <p>{{ task.description }}</p>
+      <button (click)="editTask(task)">Editar</button>
+      <button (click)="deleteTask(task)">Excluir</button>
+    </li>
+  </ul>
+</div>

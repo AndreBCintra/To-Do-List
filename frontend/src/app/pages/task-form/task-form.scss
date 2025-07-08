@@ -1,0 +1,37 @@
+.task-form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+
+  h2 {
+    margin-bottom: 1rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    label {
+      margin-bottom: 1rem;
+      display: flex;
+      flex-direction: column;
+      font-weight: bold;
+
+      input, textarea {
+        margin-top: 0.5rem;
+        padding: 0.5rem;
+        font-size: 1rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      gap: 1rem;
+
+      button {
+        padding: 0.5rem 1rem;
+        font-size: 1rem;
+      }
+    }
+  }
+}

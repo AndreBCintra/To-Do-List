@@ -1,0 +1,22 @@
+<div class="task-form-container">
+  <h2>{{ isEdit ? 'Editar Tarefa' : 'Nova Tarefa' }}</h2>
+
+  <div *ngIf="loading">Carregando tarefa...</div>
+
+  <form *ngIf="!loading" (ngSubmit)="salvar()">
+    <label>
+      Título:
+      <input type="text" [(ngModel)]="taskData.title" name="title" required />
+    </label>
+
+    <label>
+      Descrição:
+      <textarea [(ngModel)]="taskData.description" name="description"></textarea>
+    </label>
+
+    <div class="buttons">
+      <button type="submit">Salvar</button>
+      <button type="button" (click)="cancelar()">Cancelar</button>
+    </div>
+  </form>
+</div>
