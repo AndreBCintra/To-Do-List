@@ -1,0 +1,10 @@
+id,title,description,status,isDeleted,createdAt,updatedAt
+1751974131891,Teste 1,Tarefa para testar funcionalidade,pending,1,2025-07-08T11:28:51.891Z,2025-07-08T11:44:48.664Z
+1751974726104,a,a,pending,1,2025-07-08T11:38:46.104Z,2025-07-08T11:44:49.771Z
+1751974729321,t,t,pending,1,2025-07-08T11:38:49.321Z,2025-07-08T11:44:51.986Z
+1751974732505,f,f,pending,1,2025-07-08T11:38:52.505Z,2025-07-08T11:44:54.329Z
+1751975112183,Primeira Tarefa,Primeira tarefa criada,done,0,2025-07-08T11:45:12.183Z,2025-07-08T11:53:09.635Z
+1751975121159,Segunda tarefa,Segunda tarefa criada,pending,0,2025-07-08T11:45:21.159Z,2025-07-08T11:45:21.159Z
+1751975130299,Terceira Tarefa,Terceira Tarefa Criada,pending,0,2025-07-08T11:45:30.299Z,2025-07-08T11:45:30.299Z
+1751975147517,Quarta Tarefa,Quarta tarefa criada,pending,0,2025-07-08T11:45:47.517Z,2025-07-08T11:45:47.517Z
+1751975707494,Quinta Tarefa,Quinta tarefa adicionada,pending,0,2025-07-08T11:55:07.494Z,2025-07-08T11:55:07.494Z
